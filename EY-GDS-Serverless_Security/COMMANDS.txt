@@ -1,0 +1,240 @@
+============================================================
+EY GDS SERVERLESS SECURITY
+COMMAND REFERENCE
+============================================================
+
+
+1. PROJECT SETUP
+============================================================
+
+Create virtual environment:
+
+python -m venv .venv
+
+
+Activate virtual environment - Windows:
+
+.venv\Scripts\activate
+
+
+Install dependencies:
+
+pip install -r requirements.txt
+
+
+Upgrade pip:
+
+python -m pip install --upgrade pip
+
+
+
+2. RUN THE TESTS
+============================================================
+
+Run all tests:
+
+python -m pytest
+
+
+Run a specific test file:
+
+python -m pytest tests/test_attack_detection.py
+
+python -m pytest tests/test_dependency_scanner.py
+
+python -m pytest tests/test_iam_scanner.py
+
+python -m pytest tests/test_config_scanner.py
+
+python -m pytest tests/test_security_engine.py
+
+
+Run tests with more detailed output:
+
+python -m pytest -v
+
+
+
+3. RUN THE SECURITY DASHBOARD
+============================================================
+
+Start the Streamlit dashboard:
+
+streamlit run dashboard/app.py
+
+
+Alternative:
+
+python -m streamlit run dashboard/app.py
+
+
+
+4. GIT - CHECK PROJECT STATUS
+============================================================
+
+Check current Git status:
+
+git status
+
+
+Show modified files:
+
+git diff
+
+
+Show commit history:
+
+git log --oneline
+
+
+Check remote repository:
+
+git remote -v
+
+
+
+5. GIT - SAVE CHANGES
+============================================================
+
+Stage a specific file:
+
+git add <filename>
+
+
+Stage all changes:
+
+git add .
+
+
+Create a commit:
+
+git commit -m "Describe the change"
+
+
+Push changes to GitHub:
+
+git push origin main
+
+
+Pull the latest changes:
+
+git pull origin main
+
+
+
+6. GIT - BEFORE PUSHING
+============================================================
+
+Recommended workflow:
+
+git status
+
+python -m pytest
+
+git add .
+
+git commit -m "Describe the change"
+
+git push origin main
+
+
+Always make sure the tests pass before pushing.
+
+
+
+7. SECURITY SCANNERS
+============================================================
+
+Attack Detection:
+
+python -m pytest tests/test_attack_detection.py
+
+
+Dependency Scanner:
+
+python -m pytest tests/test_dependency_scanner.py
+
+
+IAM Scanner:
+
+python -m pytest tests/test_iam_scanner.py
+
+
+Configuration Scanner:
+
+python -m pytest tests/test_config_scanner.py
+
+
+Security Engine:
+
+python -m pytest tests/test_security_engine.py
+
+
+
+8. FULL PROJECT VALIDATION
+============================================================
+
+Run the complete test suite:
+
+python -m pytest
+
+
+Expected result:
+
+All tests should pass before committing changes.
+
+
+
+9. PROJECT WORKFLOW
+============================================================
+
+1. Activate the virtual environment.
+
+2. Install dependencies if necessary.
+
+3. Make the required code changes.
+
+4. Add/update tests.
+
+5. Run the relevant scanner tests.
+
+6. Run the complete test suite:
+
+   python -m pytest
+
+7. Check Git status:
+
+   git status
+
+8. Stage the changes:
+
+   git add .
+
+9. Commit:
+
+   git commit -m "Describe the change"
+
+10. Push:
+
+   git push origin main
+
+
+
+10. IMPORTANT NOTES
+============================================================
+
+Do not commit the virtual environment:
+
+.venv/
+
+Do not commit secrets, AWS credentials, API keys, passwords,
+or other sensitive information.
+
+Run the complete test suite before pushing changes.
+
+If multiple team members are working on the repository,
+pull/rebase carefully and resolve conflicts before pushing.
+
+Current project test status:
+
+44 tests passing.
